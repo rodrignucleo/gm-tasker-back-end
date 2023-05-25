@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gL+6fNqiX2o2NJ10lbUi61iLIPJ1EHTvPcqQRxJo3znij1ovHNb2LLrM1VQNXYoU7bCrEiIBXTluJk63xw/9WA==",
+  "dgSpecHash": "D3rzKN/gHWnSaS5W+1jAETHYfMqmtcIVEW9ll97H7YJwE5FBnzphSuP8FvcWIUNa9Q9LoOesdeXuDOkMwXmJtQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.API\\GMTasker.API.csproj",
+  "projectFilePath": "c:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.API\\GMTasker.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rodri\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\rodri\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
