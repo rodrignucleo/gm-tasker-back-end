@@ -7,18 +7,18 @@ namespace GMTasker.API.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdUsuario { get; set; }
+        public int id_usuario { get; set; }
         
         [Required(ErrorMessage = "Nome é obrigatório!")]
-        public string? Nome { get; set; }
+        public string? nome { get; set; }
 
         [Required(ErrorMessage = "CPF é obrigatório!")]
-        public string? Cpf { get; set; }
+        public string? cpf { get; set; }
 
         [Required(ErrorMessage = "Telefone é obrigatório!")]
-        public string? Telefone { get; set; }
+        public string? telefone { get; set; }
 
         [Required(ErrorMessage = "Login é obrigatório!")]
-        public string? Login { get; set; }
+        public string? login { get; set; }
     }
 }
