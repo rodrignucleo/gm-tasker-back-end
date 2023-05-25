@@ -12,9 +12,6 @@ namespace GMTasker.API.Models
         [Required(ErrorMessage = "Nome é obrigatório!")]
         public string? Nome { get; set; }
 
-        [Required(ErrorMessage = "Sobrenome é obrigatório!")]
-        public string? Sobrenome { get; set; }
-
         [Required(ErrorMessage = "CPF é obrigatório!")]
         public string? Cpf { get; set; }
 

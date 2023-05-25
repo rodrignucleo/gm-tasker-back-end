@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\GMTasker.API\\GMTasker.API.csproj": {}
+    "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\GMTasker.API\\GMTasker.API.csproj": {}
   },
   "projects": {
-    "c:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\GMTasker.API\\GMTasker.API.csproj": {
+    "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\GMTasker.API\\GMTasker.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\GMTasker.API\\GMTasker.API.csproj",
+        "projectUniqueName": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\GMTasker.API\\GMTasker.API.csproj",
         "projectName": "GMTasker.API",
-        "projectPath": "c:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\GMTasker.API\\GMTasker.API.csproj",
+        "projectPath": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\GMTasker.API\\GMTasker.API.csproj",
         "packagesPath": "C:\\Users\\rodri\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\GMTasker.API\\obj\\",
+        "outputPath": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\GMTasker.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rodri\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,6 +53,10 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[7.0.5, )"
+            },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
