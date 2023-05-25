@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "P8SupF0zp8bCh3Hb9YXSDa8HCopv3bpIpUcbmGGTpCw=",
+  "Hash": "CWkhoPOt/rRpqGs7pB0oi5KTaVLABxaGogpLFT788xE=",
   "Source": "GMTasker.RazorPages",
   "BasePath": "_content/GMTasker.RazorPages",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\wwwroot\\images\\g.png",
+      "SourceId": "GMTasker.RazorPages",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\wwwroot\\",
+      "BasePath": "_content/GMTasker.RazorPages",
+      "RelativePath": "images/g.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\g.png"
+    },
+    {
+      "Identity": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\wwwroot\\images\\logo.jpg",
+      "SourceId": "GMTasker.RazorPages",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\wwwroot\\",
+      "BasePath": "_content/GMTasker.RazorPages",
+      "RelativePath": "images/logo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.jpg"
+    },
     {
       "Identity": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.css",
       "SourceId": "GMTasker.RazorPages",
