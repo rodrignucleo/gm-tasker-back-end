@@ -17,6 +17,7 @@ namespace GMTasker.API.Data{
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<UsuarioModel>(entity =>
             {
+                entity.Property(p => p.Cpf).HasMaxLength(15);
                 entity.HasKey(e => e.IdUsuario);
                 entity.Property(e => e.Nome).IsRequired();
                 entity.HasData(
