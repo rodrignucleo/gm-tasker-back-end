@@ -7,13 +7,7 @@ namespace GMTasker.RazorPages.Pages.Usuario
 {
     public class Index : PageModel
     {
-        // private readonly AppDbContext _context;
-
         public List<UsuarioModel> UsuarioList { get; set; } = new();
-
-        // public Index(AppDbContext context){
-        //     _context = context;
-        // }
 
         public Index(){
 
@@ -22,7 +16,7 @@ namespace GMTasker.RazorPages.Pages.Usuario
         public async Task<IActionResult> OnGetAsync(){
             // GarconList = await _context.Garcon!.ToListAsync();
             var httpClient = new HttpClient();
-            var url = "http://localhost:5171/api/Usuario";
+            var url = "http://localhost:5072/api/Usuario";
             var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             var response = await httpClient.SendAsync(requestMessage);
             var content = await response.Content.ReadAsStringAsync();

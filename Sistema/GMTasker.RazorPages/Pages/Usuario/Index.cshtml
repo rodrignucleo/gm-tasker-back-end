@@ -1,5 +1,6 @@
 @page
-@model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Garcon.Index
+@model GMTasker.RazorPages.Pages.Usuario.Index
+
 <h1>Garçons Cadastrados</h1>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="info">
@@ -9,25 +10,25 @@
         <thead>
             <tr>
                 <td scope="col">ID</td>
-                <td scope="col">@Html.DisplayNameFor(model => model.GarconList[0].Nome) </td>
-                <td scope="col">@Html.DisplayNameFor(model => model.GarconList[0].Sobrenome)</td>
+                <td scope="col">Nome</td>
                 <td scope="col">CPF</td>
-                <td scope="col">@Html.DisplayNameFor(model => model.GarconList[0].Telefone)</td>
+                <td scope="col">Telefone</td>
+                <td scope="col">Login</td>
             </tr>
         </thead>
         <tbody>
-            @foreach (var garconModel in Model.GarconList.OrderBy(g => g.Nome))
+            @foreach (var UsuarioModel in Model.UsuarioList.OrderBy(g => g.nome))
             {
                 <tr>
-                    <td>@Html.DisplayFor(model => garconModel.GarconId)</td>
-                    <td>@Html.DisplayFor(model => garconModel.Nome)</td>
-                    <td>@Html.DisplayFor(model => garconModel.Sobrenome)</td>
-                    <td>@Html.DisplayFor(model => garconModel.Cpf)</td>
-                    <td>@Html.DisplayFor(model => garconModel.Telefone)</td>
+                    <td>@Html.DisplayFor(model => UsuarioModel.id_usuario)</td>
+                    <td>@Html.DisplayFor(model => UsuarioModel.nome)</td>
+                    <td>@Html.DisplayFor(model => UsuarioModel.cpf)</td>
+                    <td>@Html.DisplayFor(model => UsuarioModel.telefone)</td>
+                    <td>@Html.DisplayFor(model => UsuarioModel.login)</td>
                     <td>
-                        <a class="btn btn-sm btn-secondary active" asp-page="./Edit" asp-route-id="@garconModel.GarconId"> <i class="fa fa-pencil"></i>  </a>
-                        <a class="btn btn-secondary btn-sm btn-success" asp-page="./Details" asp-route-id="@garconModel.GarconId"> <i class="fa fa-eye"></i> </a>
-                        <a class="btn btn-secondary btn-sm btn-danger" asp-page="./Delete" asp-route-id="@garconModel.GarconId"> <i class="fa fa-trash"></i> </a>
+                        <a class="btn btn-sm btn-secondary active" asp-page="./Edit" asp-route-id="@UsuarioModel.id_usuario"> <i class="fa fa-pencil"></i>  </a>
+                        <a class="btn btn-secondary btn-sm btn-success" asp-page="./Details" asp-route-id="@UsuarioModel.id_usuario"> <i class="fa fa-eye"></i> </a>
+                        <a class="btn btn-secondary btn-sm btn-danger" asp-page="./Delete" asp-route-id="@UsuarioModel.id_usuario"> <i class="fa fa-trash"></i> </a>
                     </td>
                 </tr>
             }

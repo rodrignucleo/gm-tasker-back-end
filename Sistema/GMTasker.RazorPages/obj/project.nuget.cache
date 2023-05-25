@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3eG+MjWqtl4bh2uVTkLhoGmSVt1XH1RTQ0EBY1xy+aeHPEDwd8Y/Rf8P13pWL5iMuGZZ3uWonDMO+6d2IssWww==",
+  "dgSpecHash": "XcjLxYQxMvu0ujohTiHuKcZ1bwww8uqnVG1Q2MC4ffmKWBjgM547Fp6k9g+uV7ihxooW69ApA8YR05J1vc5BYQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\GMTasker.RazorPages.csproj",
+  "projectFilePath": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\GMTasker.RazorPages.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rodri\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\GMTasker.RazorPages.csproj": {}
+    "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\GMTasker.RazorPages.csproj": {}
   },
   "projects": {
-    "c:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\GMTasker.RazorPages.csproj": {
+    "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\GMTasker.RazorPages.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\GMTasker.RazorPages.csproj",
+        "projectUniqueName": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\GMTasker.RazorPages.csproj",
         "projectName": "GMTasker.RazorPages",
-        "projectPath": "c:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\GMTasker.RazorPages.csproj",
+        "projectPath": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\GMTasker.RazorPages.csproj",
         "packagesPath": "C:\\Users\\rodri\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\obj\\",
+        "outputPath": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rodri\\AppData\\Roaming\\NuGet\\NuGet.Config",
