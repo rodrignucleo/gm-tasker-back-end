@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .table-hover-custom tbody tr:hover{
+                background-color: #cdccd1;
+            }
+            header {
+                display: flex;
+               justify-content: center;
+                padding-top: 10px;
+            }
+
+        </style>
+        <title>UTFPR - Gerenciador de Pedidos de Restaurante</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css"/>
+        <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <partial name="./_MainMenuPartialPage.cshtml"/>
+        </header>
+
+        <main>
+            @RenderBody()
+        </main>
+
+        <p><hr/></p>
+        
+        <footer>2023 - Rodrigo Ribeiro, Lucas Passos, Jackson Sieben</footer>
+        <script>
+
+            // obtém a URL atual
+            const currentUrl = window.location.href;
+
+            // seleciona todos os links da barra de navegação
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // percorre todos os links da barra de navegação
+            navLinks.forEach(link => {
+            // obtém a URL do link
+            const linkUrl = link.href;
+
+            // verifica se a URL do link é a mesma que a URL atual
+            if (currentUrl === linkUrl) {
+                // adiciona a classe 'active' ao link correspondente
+                link.classList.add('active');
+            }
+            });
+        </script> 
+        @RenderSection("scripts", required:false)
+    </body>
+
+</html>

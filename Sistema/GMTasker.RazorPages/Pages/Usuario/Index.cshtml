@@ -1,0 +1,56 @@
+@page
+@model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Garcon.Index
+<h1>Garçons Cadastrados</h1>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="info">
+    <div align="center">
+    </div>
+    <table class="table table-bordered table-sm table-hover-custom">
+        <thead>
+            <tr>
+                <td scope="col">ID</td>
+                <td scope="col">@Html.DisplayNameFor(model => model.GarconList[0].Nome) </td>
+                <td scope="col">@Html.DisplayNameFor(model => model.GarconList[0].Sobrenome)</td>
+                <td scope="col">CPF</td>
+                <td scope="col">@Html.DisplayNameFor(model => model.GarconList[0].Telefone)</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var garconModel in Model.GarconList.OrderBy(g => g.Nome))
+            {
+                <tr>
+                    <td>@Html.DisplayFor(model => garconModel.GarconId)</td>
+                    <td>@Html.DisplayFor(model => garconModel.Nome)</td>
+                    <td>@Html.DisplayFor(model => garconModel.Sobrenome)</td>
+                    <td>@Html.DisplayFor(model => garconModel.Cpf)</td>
+                    <td>@Html.DisplayFor(model => garconModel.Telefone)</td>
+                    <td>
+                        <a class="btn btn-sm btn-secondary active" asp-page="./Edit" asp-route-id="@garconModel.GarconId"> <i class="fa fa-pencil"></i>  </a>
+                        <a class="btn btn-secondary btn-sm btn-success" asp-page="./Details" asp-route-id="@garconModel.GarconId"> <i class="fa fa-eye"></i> </a>
+                        <a class="btn btn-secondary btn-sm btn-danger" asp-page="./Delete" asp-route-id="@garconModel.GarconId"> <i class="fa fa-trash"></i> </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+<p style="text-align:center"><a class="btn btn-primary" role="button" asp-page="./Create"> <strong>Cadastrar</strong></a></p>
+</div>
+
+
+<style>
+    main{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .info{
+        width: 60vw;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 5px;
+    }
+</style>
