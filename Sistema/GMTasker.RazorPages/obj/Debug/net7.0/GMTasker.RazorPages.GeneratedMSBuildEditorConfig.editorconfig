@@ -16,10 +16,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = c:\Users\rodri\OneDrive\Documentos\Programacao\TDS\Gerenciador De Tarefa\GM-Tasker\Sistema\GMTasker.RazorPages
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/rodri/OneDrive/Documentos/Programacao/TDS/Gerenciador De Tarefa/GM-Tasker/Sistema/GMTasker.RazorPages/Pages/Garcon/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2FyY29uXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [c:/Users/rodri/OneDrive/Documentos/Programacao/TDS/Gerenciador De Tarefa/GM-Tasker/Sistema/GMTasker.RazorPages/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -30,4 +26,8 @@ build_metadata.AdditionalFiles.CssScope =
 
 [c:/Users/rodri/OneDrive/Documentos/Programacao/TDS/Gerenciador De Tarefa/GM-Tasker/Sistema/GMTasker.RazorPages/Pages/Shared/_MainMenuPartialPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9NYWluTWVudVBhcnRpYWxQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/rodri/OneDrive/Documentos/Programacao/TDS/Gerenciador De Tarefa/GM-Tasker/Sistema/GMTasker.RazorPages/Pages/Usuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

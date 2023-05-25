@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GMTasker.API.Models
+namespace GMTasker.RazorPages.Models
 {
     public class UsuarioModel
     {
