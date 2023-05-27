@@ -62,3 +62,4 @@ C:\Users\rodri\OneDrive\Documentos\Programacao\TDS\Gerenciador De Tarefa\GM-Task
 C:\Users\rodri\OneDrive\Documentos\Programacao\TDS\Gerenciador De Tarefa\GM-Tasker\Sistema\GMTasker.API\obj\Debug\net7.0\GMTasker.API.pdb
 C:\Users\rodri\OneDrive\Documentos\Programacao\TDS\Gerenciador De Tarefa\GM-Tasker\Sistema\GMTasker.API\obj\Debug\net7.0\GMTasker.API.genruntimeconfig.cache
 C:\Users\rodri\OneDrive\Documentos\Programacao\TDS\Gerenciador De Tarefa\GM-Tasker\Sistema\GMTasker.API\obj\Debug\net7.0\ref\GMTasker.API.dll
+C:\Users\rodri\OneDrive\Documentos\Programacao\TDS\Gerenciador De Tarefa\GM-Tasker\Sistema\GMTasker.API\bin\Debug\net7.0\BCrypt.Net.dll
