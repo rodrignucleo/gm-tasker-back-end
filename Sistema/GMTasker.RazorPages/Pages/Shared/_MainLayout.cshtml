@@ -1,26 +1,12 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            .table-hover-custom tbody tr:hover{
-                background-color: #d4d7ee;
-            }
-            header {
-                display: flex;
-                justify-content: center;
-                padding-top: 10px;
-            }
-
-        </style>
-        <title>GM Tasker</title>
-        <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css"/>
-        <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <header>
-            <partial name="./_MainMenuPartialPage.cshtml"/>
-        </header>
-
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css"/>
+<header>
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    
+    <partial name="./_MainMenuPartialPage.cshtml"/>
+</header>
+<body>
         <main>
             @RenderBody()
         </main>
@@ -52,3 +38,13 @@
     </body>
 
 </html>
+
+<style>
+    .table-hover-custom tbody tr:hover{
+        background-color: #8f8f8f;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+    }
+</style>

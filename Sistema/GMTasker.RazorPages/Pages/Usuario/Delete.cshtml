@@ -1,0 +1,20 @@
+@page "{id:int}"
+@model GMTasker.RazorPages.Pages.Usuario.Delete
+<div align="center">
+
+
+<div>
+    <h1>Deseja realmente remover?</h1>
+
+    <p><strong>Nome:</strong> @Model.UsuarioModel.nome </p>
+    <p><strong>CPF:</strong> @Model.UsuarioModel.cpf </p>
+    <p><strong>Login:</strong> @Model.UsuarioModel.login </p>
+</div>
+
+<form method="post">
+    <div class="form-group">
+        <input type="submit" value="Sim" class="btn btn-danger"/>
+        <a asp-page="/Usuario/Index" class="btn btn-primary"> Voltar</a>
+    </div>
+</form>
+</div>

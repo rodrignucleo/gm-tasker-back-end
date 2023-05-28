@@ -20,5 +20,9 @@ namespace GMTasker.RazorPages.Models
 
         [Required(ErrorMessage = "Login é obrigatório!")]
         public string? login { get; set; }
+
+        // [Required(ErrorMessage = "Senha é obrigatório!")]
+        [DataType(DataType.Password)]
+        public string? senha { get; set; }
     }
 }

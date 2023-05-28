@@ -47,13 +47,14 @@ namespace GMTasker.API.Controllers.Usuario
 
         [HttpPost]
         public async Task<ActionResult<UsuarioModel>> PostUsuario(UsuarioModel usuario){
+            usuario.senha = BCrypt.Net.BCrypt.HashPassword(usuario.senha);
             _context!.tb_usuario!.Add(usuario);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetUsuario", new{id = usuario.id_usuario}, usuario);
         }
 
-        [HttpDelete]
+        [HttpDelete("/api/Usuario/Delete/{id_usuario:int}")]
         public async Task<ActionResult> DeleteUsuario(int id_usuario){
             var usuario = await _context!.tb_usuario!.FindAsync(id_usuario);
             if(usuario == null){

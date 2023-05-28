@@ -21,7 +21,7 @@ namespace GMTasker.API.Models
         [Required(ErrorMessage = "Login é obrigatório!")]
         public string? login { get; set; }
 
-        //[Required(ErrorMessage = "Senha é obrigatório!")]
+        // [Required(ErrorMessage = "Senha é obrigatório!")]
         [DataType(DataType.Password)]
         public string? senha { get; set; }
     }
