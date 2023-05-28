@@ -1,52 +1,69 @@
 @page "{id:int}"
-@model GMTasker.RazorPages.Pages.Garcon.Edit
+@model GMTasker.RazorPages.Pages.Usuario.Edit
 
-<h1>Alterar Dados do Garçom</h1>
-
-<hr/>
-<div class="row">
-    <div class="col-md-4">
+    <h1>Alterar Dados do Usuário</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="info">
+        <div align="center">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-dange"></div>
             <input type="hidden" asp-for="UsuarioModel.id_usuario"/>
             <div class="form-group">
-                <label asp-for="UsuarioModel.nome"></label>
+                <label asp-for="UsuarioModel.nome">Nome</label>
                 <input asp-for="UsuarioModel.nome" class="form-control"/>
                 <span asp-validation-for="UsuarioModel.nome" class="text-dange"></span>
             </div>
             <br/>
             <div class="form-group">
-                CPF</label>
-                <input asp-for="UsuarioModel.cpf" class="form-control" maxlength="14" class="form-control" onkeyup="handleCPF(event)"/>
-                <span asp-validation-for="UsuarioModel.cpf" type="number" class="text-dange"></span>
+                <label>CPF</label>
+                <input asp-for="UsuarioModel.cpf" maxlength="14" class="form-control" onkeyup="handleCPF(event)"/>
+                <span asp-validation-for="UsuarioModel.cpf" class="text-dange"></span>
             </div>
             <br/>
             <div class="form-group">
-                <label asp-for="UsuarioModel.telefone"></label>
+                <label asp-for="UsuarioModel.telefone">Telefone</label>
                 <input asp-for="UsuarioModel.telefone" class="form-control" maxlength="15" onkeyup="handlePhone(event)"/>
-                <span asp-validation-for="UsuarioModel.telefone" type="number" class="text-dange"></span>
+                <span asp-validation-for="UsuarioModel.telefone" class="text-dange"></span>
             </div>
             <br/>
             <div class="form-group">
-                <label asp-for="UsuarioModel.login"></label>
+                <label asp-for="UsuarioModel.login">Login</label>
                 <input asp-for="UsuarioModel.login" class="form-control"></textarea>
                 <span asp-validation-for="UsuarioModel.login" class="text-dange"></span>
             </div>
             <br/>
             <div class="form-group">
                 <label asp-for="UsuarioModel.senha">Senha</label>
-                <input asp-for="UsuarioModel.senha" class="form-control" type="password"></textarea>
+                <input asp-for="UsuarioModel.senha" class="form-control"  type="password"></textarea>
                 <span asp-validation-for="UsuarioModel.senha" class="text-dange"></span>
             </div>
             <br/>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Salvar"/>
-                <a asp-page="/Garcon/Index" class="btn btn-secondary"> Cancelar</a>
+                <a asp-page="/Usuario/Index" class="btn btn-secondary"> Cancelar</a>
             </div>
         </form>
     </div>
 </div>
 
+<style>
+
+    main{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .info{
+        width: 25vw;
+        text-align: center;
+        background-color: rgb(201, 201, 201);
+        padding: 15px;
+        border-radius: 25px;
+    }
+</style>
 
 @section Scripts
 {
@@ -75,6 +92,6 @@
         value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4")
         return value
     }
-
 </script>
 }
+

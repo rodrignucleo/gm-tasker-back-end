@@ -34,6 +34,7 @@ namespace GMTasker.API.Controllers.Usuario
             if(id_usuario != usuario.id_usuario){
                 return BadRequest();
             }
+            usuario.senha = BCrypt.Net.BCrypt.HashPassword(usuario.senha);
             _context!.Entry(usuario).State = EntityState.Modified;
 
             try{

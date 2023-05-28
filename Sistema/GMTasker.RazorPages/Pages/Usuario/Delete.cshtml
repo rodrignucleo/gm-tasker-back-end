@@ -1,8 +1,9 @@
 @page "{id:int}"
 @model GMTasker.RazorPages.Pages.Usuario.Delete
 <div align="center">
-
-
+<br>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="info">
 <div>
     <h1>Deseja realmente remover?</h1>
 
@@ -18,3 +19,27 @@
     </div>
 </form>
 </div>
+</div>
+
+<p style="text-align:center"><a class="btn btn-primary" role="button" asp-page="Index"> <strong>Voltar</strong></a></p>
+
+
+<style>
+
+    main{
+        
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .info{
+        width: 60vw;
+        text-align: left;
+        background-color: rgb(201, 201, 201);
+        padding: 10px;
+        border-radius: 5px;
+    }
+</style>

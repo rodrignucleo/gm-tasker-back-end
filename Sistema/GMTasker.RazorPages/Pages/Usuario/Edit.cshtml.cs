@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using GMTasker.RazorPages.Models;
 
-namespace GMTasker.RazorPages.Pages.Garcon
+namespace GMTasker.RazorPages.Pages.Usuario
 {
     public class Edit : PageModel
     {
