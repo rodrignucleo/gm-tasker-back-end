@@ -1,17 +1,19 @@
-using System.Net;
+using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using GMTasker.RazorPages.Models;
 
-namespace GMTasker.RazorPages.Pages.Usuario
+namespace GMTasker.RazorPages.Pages.Garcon
 {
-    public class Delete : PageModel {   
+    public class Edit : PageModel
+    {
         [BindProperty]
         public UsuarioModel UsuarioModel { get; set; } = new();
-        public Delete(){
+
+        public Edit(){
         }
-        
+
         public async Task<IActionResult> OnGetAsync(int? id){
             if(id == null){
                 return NotFound();
@@ -25,7 +27,6 @@ namespace GMTasker.RazorPages.Pages.Usuario
             if(!response.IsSuccessStatusCode){
                 return NotFound();
             }
-
             var content = await response.Content.ReadAsStringAsync();
             UsuarioModel = JsonConvert.DeserializeObject<UsuarioModel>(content)!;
             
@@ -33,26 +34,24 @@ namespace GMTasker.RazorPages.Pages.Usuario
         }
 
         public async Task<IActionResult> OnPostAsync(int id){
+            if(!ModelState.IsValid){
+                return Page();
+            }
+
             var httpClient = new HttpClient();
             var url = $"http://localhost:5072/api/Usuario/{id}";
-            var requestMessage = new HttpRequestMessage(HttpMethod.Delete, url);
+            var garconJson = JsonConvert.SerializeObject(UsuarioModel);
+
+            var requestMessage = new HttpRequestMessage(HttpMethod.Put, url);
+            requestMessage.Content = new StringContent(garconJson, Encoding.UTF8, "application/json");
+
             var response = await httpClient.SendAsync(requestMessage);
 
-            Console.Out.WriteLine(response.StatusCode);
+            if(!response.IsSuccessStatusCode){
+                return Page();
+            }
 
-            if (response.IsSuccessStatusCode)
-            {
-                return RedirectToPage("/Usuario/Index");
-            }
-            else if (response.StatusCode == HttpStatusCode.NotFound)
-            {
-                return NotFound();
-            }
-            else
-            {
-                // return NotFound();
-                return RedirectToPage("/Usuario/Index");
-            }
+            return Redirect($"/Usuario/Details/{id}");
         }
     }
 }

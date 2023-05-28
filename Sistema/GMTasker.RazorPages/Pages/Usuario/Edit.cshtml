@@ -1,0 +1,80 @@
+@page "{id:int}"
+@model GMTasker.RazorPages.Pages.Garcon.Edit
+
+<h1>Alterar Dados do Garçom</h1>
+
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-dange"></div>
+            <input type="hidden" asp-for="UsuarioModel.id_usuario"/>
+            <div class="form-group">
+                <label asp-for="UsuarioModel.nome"></label>
+                <input asp-for="UsuarioModel.nome" class="form-control"/>
+                <span asp-validation-for="UsuarioModel.nome" class="text-dange"></span>
+            </div>
+            <br/>
+            <div class="form-group">
+                CPF</label>
+                <input asp-for="UsuarioModel.cpf" class="form-control" maxlength="14" class="form-control" onkeyup="handleCPF(event)"/>
+                <span asp-validation-for="UsuarioModel.cpf" type="number" class="text-dange"></span>
+            </div>
+            <br/>
+            <div class="form-group">
+                <label asp-for="UsuarioModel.telefone"></label>
+                <input asp-for="UsuarioModel.telefone" class="form-control" maxlength="15" onkeyup="handlePhone(event)"/>
+                <span asp-validation-for="UsuarioModel.telefone" type="number" class="text-dange"></span>
+            </div>
+            <br/>
+            <div class="form-group">
+                <label asp-for="UsuarioModel.login"></label>
+                <input asp-for="UsuarioModel.login" class="form-control"></textarea>
+                <span asp-validation-for="UsuarioModel.login" class="text-dange"></span>
+            </div>
+            <br/>
+            <div class="form-group">
+                <label asp-for="UsuarioModel.senha">Senha</label>
+                <input asp-for="UsuarioModel.senha" class="form-control" type="password"></textarea>
+                <span asp-validation-for="UsuarioModel.senha" class="text-dange"></span>
+            </div>
+            <br/>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Salvar"/>
+                <a asp-page="/Garcon/Index" class="btn btn-secondary"> Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts
+{
+<script>
+    const handlePhone = (event) => {
+        let input = event.target
+        input.value = phoneMask(input.value)
+    }
+
+    const phoneMask = (value) => {
+        if (!value) return ""
+        value = value.replace(/\D/g, '')
+        value = value.replace(/(\d{2})(\d)/, "($1) $2")
+        value = value.replace(/(\d)(\d{4})$/, "$1-$2")
+        return value
+    }
+
+    const handleCPF = (event) => {
+        let input = event.target
+        input.value = cpfMask(input.value)
+    }
+
+    const cpfMask = (value) => {
+        if (!value) return ""
+        value = value.replace(/\D/g, '')
+        value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4")
+        return value
+    }
+
+</script>
+}
