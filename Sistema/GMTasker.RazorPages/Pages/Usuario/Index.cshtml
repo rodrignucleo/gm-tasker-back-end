@@ -13,7 +13,7 @@
                 <td scope="col">Nome</td>
                 <td scope="col">CPF</td>
                 <td scope="col">Telefone</td>
-                <td scope="col">Login</td>
+                <td scope="col">Email</td>
             </tr>
         </thead>
         <tbody>
@@ -24,7 +24,7 @@
                     <td>@Html.DisplayFor(model => UsuarioModel.nome)</td>
                     <td>@Html.DisplayFor(model => UsuarioModel.cpf)</td>
                     <td>@Html.DisplayFor(model => UsuarioModel.telefone)</td>
-                    <td>@Html.DisplayFor(model => UsuarioModel.login)</td>
+                    <td>@Html.DisplayFor(model => UsuarioModel.email)</td>
                     <td>
                         <a class="btn btn-sm btn-secondary active" asp-page="./Edit" asp-route-id="@UsuarioModel.id_usuario"> <i class="fa fa-pencil"></i>  </a>
                         <a class="btn btn-secondary btn-sm btn-success" asp-page="./Details" asp-route-id="@UsuarioModel.id_usuario"> <i class="fa fa-eye"></i> </a>

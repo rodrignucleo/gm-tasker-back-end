@@ -37,13 +37,12 @@ namespace GMTasker.RazorPages.Pages.Usuario
             if(!ModelState.IsValid){
                 return Page();
             }
-
+            
             var httpClient = new HttpClient();
             var url = $"http://localhost:5072/api/Usuario/{id}";
-            var garconJson = JsonConvert.SerializeObject(UsuarioModel);
-
+            var usuarioJson = JsonConvert.SerializeObject(UsuarioModel);
             var requestMessage = new HttpRequestMessage(HttpMethod.Put, url);
-            requestMessage.Content = new StringContent(garconJson, Encoding.UTF8, "application/json");
+            requestMessage.Content = new StringContent(usuarioJson, Encoding.UTF8, "application/json");
 
             var response = await httpClient.SendAsync(requestMessage);
 

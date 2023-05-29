@@ -18,11 +18,14 @@ namespace GMTasker.API.Models
         [Required(ErrorMessage = "Telefone é obrigatório!")]
         public string? telefone { get; set; }
 
-        [Required(ErrorMessage = "Login é obrigatório!")]
-        public string? login { get; set; }
+        [Required(ErrorMessage = "Email é obrigatório!")]
+        public string? email { get; set; }
 
-        // [Required(ErrorMessage = "Senha é obrigatório!")]
+        [Required(ErrorMessage = "Senha é obrigatório!")]
         [DataType(DataType.Password)]
         public string? senha { get; set; }
+
+        [DataType(DataType.Password)]
+        public string? senha_antiga { get; set; }
     }
 }

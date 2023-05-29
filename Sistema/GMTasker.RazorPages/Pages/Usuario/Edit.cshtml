@@ -27,13 +27,19 @@
             </div>
             <br/>
             <div class="form-group">
-                <label asp-for="UsuarioModel.login">Login</label>
-                <input asp-for="UsuarioModel.login" class="form-control"></textarea>
-                <span asp-validation-for="UsuarioModel.login" class="text-dange"></span>
+                <label asp-for="UsuarioModel.email">Email</label>
+                <input asp-for="UsuarioModel.email" class="form-control"></textarea>
+                <span asp-validation-for="UsuarioModel.email" class="text-dange"></span>
             </div>
             <br/>
             <div class="form-group">
-                <label asp-for="UsuarioModel.senha">Senha</label>
+                <label asp-for="UsuarioModel.senha_antiga">Senha Antiga</label>
+                <input asp-for="UsuarioModel.senha_antiga" class="form-control"  type="password"></textarea>
+                <span asp-validation-for="UsuarioModel.senha_antiga" class="text-dange"></span>
+            </div>
+            <br/>
+            <div class="form-group">
+                <label asp-for="UsuarioModel.senha">Senha Nova</label>
                 <input asp-for="UsuarioModel.senha" class="form-control"  type="password"></textarea>
                 <span asp-validation-for="UsuarioModel.senha" class="text-dange"></span>
             </div>

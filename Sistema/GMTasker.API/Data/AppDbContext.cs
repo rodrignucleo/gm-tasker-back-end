@@ -57,8 +57,9 @@ namespace GMTasker.API.Data{
                         nome = "Rodrigo Ribeiro",
                         cpf = "12345678910",
                         telefone = "11992668225",
-                        login = "rodrignucleo",
-                        senha = BCrypt.Net.BCrypt.HashPassword("123")
+                        email = "rodrignucleo@gmtasker.com",
+                        senha = BCrypt.Net.BCrypt.HashPassword("123"),
+                        senha_antiga = BCrypt.Net.BCrypt.HashPassword("123")
                     });
                 entity.HasData(
                     new UsuarioModel
@@ -67,7 +68,9 @@ namespace GMTasker.API.Data{
                         nome = "Patricia Oliveira",
                         cpf = "98765412398",
                         telefone = "9899265826597",
-                        login = "patricia.oliveira"
+                        email = "patricia.oliveira@gmtasker.com",
+                        senha = BCrypt.Net.BCrypt.HashPassword("123123"),
+                        senha_antiga = BCrypt.Net.BCrypt.HashPassword("123123")
                     });
             });
 

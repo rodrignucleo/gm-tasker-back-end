@@ -4,8 +4,9 @@
 
 <div align="center">
     <h1>Cadastrar Usuário</h1>
-    <hr/>
-    <div class="col-md-4">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="info">
+        <div align="center">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-dange"></div>
             <input type="hidden" asp-for="UsuarioModel.id_usuario"/>
@@ -28,9 +29,9 @@
             </div>
             <br/>
             <div class="form-group">
-                <label asp-for="UsuarioModel.login">Login</label>
-                <input asp-for="UsuarioModel.login" class="form-control"></textarea>
-                <span asp-validation-for="UsuarioModel.login" class="text-dange"></span>
+                <label asp-for="UsuarioModel.email">Email</label>
+                <input asp-for="UsuarioModel.email" class="form-control"></textarea>
+                <span asp-validation-for="UsuarioModel.email" class="text-dange"></span>
             </div>
             <br/>
             <div class="form-group">
@@ -41,11 +42,30 @@
             <br/>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Salvar"/>
-                <a asp-page="/Usuario/Index" class="btn btn-secondary"> Cancelar</a>
+                <a asp-page="/Usuario/Index" class="btn btn-secondary"> Cancelar </a>
             </div>
         </form>
     </div>
 </div>
+
+<style>
+
+    main{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .info{
+        width: 25vw;
+        text-align: center;
+        background-color: rgb(201, 201, 201);
+        padding: 15px;
+        border-radius: 25px;
+    }
+</style>
 
 @section Scripts
 {
@@ -74,7 +94,5 @@
         value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4")
         return value
     }
-
-
 </script>
 }

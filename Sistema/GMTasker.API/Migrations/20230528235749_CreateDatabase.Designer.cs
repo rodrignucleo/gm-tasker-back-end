@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GMTasker.API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230526234619_CreateDatabase")]
+    [Migration("20230528235749_CreateDatabase")]
     partial class CreateDatabase
     {
         /// <inheritdoc />
@@ -74,9 +74,9 @@ namespace GMTasker.API.Migrations
                         new
                         {
                             id_requisicao = 1,
-                            data_cadastro = new DateTime(2023, 5, 26, 20, 46, 19, 236, DateTimeKind.Local).AddTicks(1233),
+                            data_cadastro = new DateTime(2023, 5, 28, 20, 57, 49, 590, DateTimeKind.Local).AddTicks(4302),
                             data_conclusao = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            data_prevista_conclusao = new DateTime(2023, 6, 2, 20, 46, 19, 236, DateTimeKind.Local).AddTicks(1234),
+                            data_prevista_conclusao = new DateTime(2023, 6, 4, 20, 57, 49, 590, DateTimeKind.Local).AddTicks(4303),
                             id_atual_responsavel = 1,
                             id_status = 1,
                             id_usuario_criacao = 2,
@@ -122,8 +122,8 @@ namespace GMTasker.API.Migrations
                         new
                         {
                             id_sprint = 1,
-                            data_cadastro = new DateTime(2023, 5, 26, 20, 46, 19, 236, DateTimeKind.Local).AddTicks(782),
-                            data_conclusao = new DateTime(2023, 5, 26, 0, 0, 0, 0, DateTimeKind.Local),
+                            data_cadastro = new DateTime(2023, 5, 28, 20, 57, 49, 590, DateTimeKind.Local).AddTicks(3940),
+                            data_conclusao = new DateTime(2023, 5, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             id_status = 2,
                             id_usuario_criacao = 1,
                             nome = "JUNHO 1 a 15"
@@ -179,7 +179,7 @@ namespace GMTasker.API.Migrations
                         .HasMaxLength(15)
                         .HasColumnType("varchar(15)");
 
-                    b.Property<string>("login")
+                    b.Property<string>("email")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -188,6 +188,10 @@ namespace GMTasker.API.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("senha")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("senha_antiga")
                         .HasColumnType("longtext");
 
                     b.Property<string>("telefone")
@@ -203,17 +207,20 @@ namespace GMTasker.API.Migrations
                         {
                             id_usuario = 1,
                             cpf = "12345678910",
-                            login = "rodrignucleo",
+                            email = "rodrignucleo@gmtasker.com",
                             nome = "Rodrigo Ribeiro",
-                            senha = "$2a$10$/wDw0962GnPggh8Bq9IC/.bYyX.GK.MIkffEZqMbIMIsnieoWWQOC",
+                            senha = "$2a$10$98deNIMv75FawNSH/BY9lObUVMGMBzOPFDtnAx/GeK/UKXDX5/hc.",
+                            senha_antiga = "$2a$10$4LnnDPZ5WRXhwgWQHf4.a.HLrdZGH9H3YQqnamSJUStNjQB6b.ayq",
                             telefone = "11992668225"
                         },
                         new
                         {
                             id_usuario = 2,
                             cpf = "98765412398",
-                            login = "patricia.oliveira",
+                            email = "patricia.oliveira@gmtasker.com",
                             nome = "Patricia Oliveira",
+                            senha = "$2a$10$.Zi97I79ayAwrWHfQ/X/QORms.cnArruFFFSj7OPMH6b5sKYWa9eq",
+                            senha_antiga = "$2a$10$3TLZkaUbm.2uuKQlIo5szOFHopbLLQRSiNxhgE.Uym2mfGjyM4I8C",
                             telefone = "9899265826597"
                         });
                 });

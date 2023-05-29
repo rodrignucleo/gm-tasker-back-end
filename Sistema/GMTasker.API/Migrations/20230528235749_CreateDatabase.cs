@@ -41,8 +41,9 @@ namespace GMTasker.API.Migrations
                     nome = table.Column<string>(type: "longtext", nullable: false),
                     cpf = table.Column<string>(type: "varchar(15)", maxLength: 15, nullable: false),
                     telefone = table.Column<string>(type: "longtext", nullable: false),
-                    login = table.Column<string>(type: "longtext", nullable: false),
-                    senha = table.Column<string>(type: "longtext", nullable: true)
+                    email = table.Column<string>(type: "longtext", nullable: false),
+                    senha = table.Column<string>(type: "longtext", nullable: false),
+                    senha_antiga = table.Column<string>(type: "longtext", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -138,22 +139,22 @@ namespace GMTasker.API.Migrations
 
             migrationBuilder.InsertData(
                 table: "tb_usuario",
-                columns: new[] { "id_usuario", "cpf", "login", "nome", "senha", "telefone" },
+                columns: new[] { "id_usuario", "cpf", "email", "nome", "senha", "senha_antiga", "telefone" },
                 values: new object[,]
                 {
-                    { 1, "12345678910", "rodrignucleo", "Rodrigo Ribeiro", "$2a$10$/wDw0962GnPggh8Bq9IC/.bYyX.GK.MIkffEZqMbIMIsnieoWWQOC", "11992668225" },
-                    { 2, "98765412398", "patricia.oliveira", "Patricia Oliveira", null, "9899265826597" }
+                    { 1, "12345678910", "rodrignucleo@gmtasker.com", "Rodrigo Ribeiro", "$2a$10$98deNIMv75FawNSH/BY9lObUVMGMBzOPFDtnAx/GeK/UKXDX5/hc.", "$2a$10$4LnnDPZ5WRXhwgWQHf4.a.HLrdZGH9H3YQqnamSJUStNjQB6b.ayq", "11992668225" },
+                    { 2, "98765412398", "patricia.oliveira@gmtasker.com", "Patricia Oliveira", "$2a$10$.Zi97I79ayAwrWHfQ/X/QORms.cnArruFFFSj7OPMH6b5sKYWa9eq", "$2a$10$3TLZkaUbm.2uuKQlIo5szOFHopbLLQRSiNxhgE.Uym2mfGjyM4I8C", "9899265826597" }
                 });
 
             migrationBuilder.InsertData(
                 table: "tb_requisicao",
                 columns: new[] { "id_requisicao", "data_cadastro", "data_conclusao", "data_prevista_conclusao", "descricao", "id_atual_responsavel", "id_sprint", "id_status", "id_usuario_criacao", "nome" },
-                values: new object[] { 1, new DateTime(2023, 5, 26, 20, 46, 19, 236, DateTimeKind.Local).AddTicks(1233), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 6, 2, 20, 46, 19, 236, DateTimeKind.Local).AddTicks(1234), null, 1, null, 1, 2, "Desenvolver API" });
+                values: new object[] { 1, new DateTime(2023, 5, 28, 20, 57, 49, 590, DateTimeKind.Local).AddTicks(4302), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 6, 4, 20, 57, 49, 590, DateTimeKind.Local).AddTicks(4303), null, 1, null, 1, 2, "Desenvolver API" });
 
             migrationBuilder.InsertData(
                 table: "tb_sprint",
                 columns: new[] { "id_sprint", "data_cadastro", "data_conclusao", "descricao", "id_status", "id_usuario_criacao", "nome" },
-                values: new object[] { 1, new DateTime(2023, 5, 26, 20, 46, 19, 236, DateTimeKind.Local).AddTicks(782), new DateTime(2023, 5, 26, 0, 0, 0, 0, DateTimeKind.Local), null, 2, 1, "JUNHO 1 a 15" });
+                values: new object[] { 1, new DateTime(2023, 5, 28, 20, 57, 49, 590, DateTimeKind.Local).AddTicks(3940), new DateTime(2023, 5, 28, 0, 0, 0, 0, DateTimeKind.Local), null, 2, 1, "JUNHO 1 a 15" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_tb_requisicao_id_atual_responsavel",
