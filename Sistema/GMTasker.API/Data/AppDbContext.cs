@@ -111,7 +111,7 @@ namespace GMTasker.API.Data{
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             // options.UseMySQL("server=localhost; userid=root;pwd=1234;port=3306;database=gmtasker_db");
-             options.UseMySQL("server=localhost;database=gmtasker_db;user=root;port=3306;password=123123");
+            options.UseMySQL("server=localhost;database=gmtasker_db;user=root;port=3306;password=123123");
         }
         
     }

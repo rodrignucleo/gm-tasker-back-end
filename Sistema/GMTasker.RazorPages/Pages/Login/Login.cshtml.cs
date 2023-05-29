@@ -11,28 +11,36 @@ namespace GMTasker.RazorPages.Pages.Login
         [BindProperty]
         public UsuarioModel UsuarioModel { get; set; } = new();
 
-        public Login()
-        {
-            
+        public Login(){
         }
-        public async Task<IActionResult> OnPosttAsync(){
-            if(!ModelState.IsValid){
-                return Page();
-            }
-            
+
+        public async Task<IActionResult> OnPostAsync(){
+
+            Console.WriteLine(UsuarioModel.email);
+            Console.WriteLine(UsuarioModel.senha);
+
+            var loginModel = new
+            {
+                email = UsuarioModel.email,
+                senha = UsuarioModel.senha
+            };
+
             var httpClient = new HttpClient();
-            var url = $"http://localhost:5072/api/Login/";
-            var loginJson = JsonConvert.SerializeObject(UsuarioModel);
-            var requestMessage = new HttpRequestMessage(HttpMethod.Put, url);
-            requestMessage.Content = new StringContent(loginJson, Encoding.UTF8, "application/json");
+            var url = $"http://localhost:5072/api/Login/{UsuarioModel.email}/{UsuarioModel.senha}";
+            var requestMessage = new HttpRequestMessage(HttpMethod.Post, url);
+            requestMessage.Content = new StringContent(JsonConvert.SerializeObject(loginModel), Encoding.UTF8, "application/json");
 
             var response = await httpClient.SendAsync(requestMessage);
 
-            if(!response.IsSuccessStatusCode){
+            if (!response.IsSuccessStatusCode)
+            {
                 return Page();
             }
 
-            return Redirect("/Index");
+            var usuariosJson = await response.Content.ReadAsStringAsync();
+            var usuarios = JsonConvert.DeserializeObject<UsuarioModel>(usuariosJson);
+
+            return Redirect($"/Usuario/Details/{usuarios!.id_usuario}");
         }
         
     }

@@ -16,21 +16,21 @@ namespace GMTasker.RazorPages.Pages.Usuario
         }
 
         public async Task<IActionResult> OnPostAsync(int id){
-                if(!ModelState.IsValid){
-                    return Page();
-                }
-                
-                var httpClient = new HttpClient();
-                var url = "http://localhost:5072/api/Usuario";
-                var usuarioJson = JsonConvert.SerializeObject(UsuarioModel);
-                var content = new StringContent(usuarioJson, Encoding.UTF8, "application/json");
-                var response = await httpClient.PostAsync(url, content);
-                
-                if(response.IsSuccessStatusCode){
-                    return RedirectToPage("/Usuario/Index");
-                } else {
-                    return Page();
-                }
+            if(!ModelState.IsValid){
+                return Page();
+            }
+            
+            var httpClient = new HttpClient();
+            var url = "http://localhost:5072/api/Usuario";
+            var usuarioJson = JsonConvert.SerializeObject(UsuarioModel);
+            var content = new StringContent(usuarioJson, Encoding.UTF8, "application/json");
+            var response = await httpClient.PostAsync(url, content);
+            
+            if(response.IsSuccessStatusCode){
+                return RedirectToPage("/Usuario/Index");
+            } else {
+                return Page();
+            }
         }
     }
 }
