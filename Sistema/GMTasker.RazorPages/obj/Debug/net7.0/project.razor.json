@@ -18670,13 +18670,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\Pages\\Login\\Login.cshtml",
-      "TargetPath": "Pages\\Login\\Login.cshtml",
+      "FilePath": "c:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\Pages\\Usuario\\Delete.cshtml",
+      "TargetPath": "Pages\\Usuario\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\Pages\\Usuario\\Delete.cshtml",
-      "TargetPath": "Pages\\Usuario\\Delete.cshtml",
+      "FilePath": "c:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\GMTasker.RazorPages\\Pages\\IndexOld.cshtml",
+      "TargetPath": "Pages\\IndexOld.cshtml",
       "FileKind": "mvc"
     },
     {
