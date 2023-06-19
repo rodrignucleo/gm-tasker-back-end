@@ -45,7 +45,7 @@ namespace GMTasker.API.Controllers.Requisicao
             }
             
             var model = _context!.tb_requisicao!.FirstOrDefault(x => x.id_requisicao == id_requisicao);
-            Console.WriteLine(model.nome);
+            Console.WriteLine(model!.nome);
             if (model == null)
             {
                 return NotFound();
