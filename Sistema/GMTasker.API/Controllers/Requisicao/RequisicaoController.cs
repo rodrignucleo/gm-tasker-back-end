@@ -43,13 +43,23 @@ namespace GMTasker.API.Controllers.Requisicao
             {
                 return BadRequest();
             }
-
+            
             var model = _context!.tb_requisicao!.FirstOrDefault(x => x.id_requisicao == id_requisicao);
-
+            Console.WriteLine(model.nome);
             if (model == null)
             {
                 return NotFound();
             }
+
+            model.nome = requisicao.nome;
+            model.descricao = requisicao.descricao;
+            model.data_cadastro = requisicao.data_cadastro;
+            model.data_prevista_conclusao = requisicao.data_prevista_conclusao;
+            model.data_conclusao = requisicao.data_conclusao;
+            model.id_status = requisicao.id_status;
+            model.id_atual_responsavel = requisicao.id_atual_responsavel;
+            model.id_usuario_criacao = requisicao.id_usuario_criacao;
+            model.id_sprint = requisicao.id_sprint;
 
             _context.tb_requisicao!.Update(model);
             _context.SaveChanges();

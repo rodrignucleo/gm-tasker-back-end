@@ -4,14 +4,14 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using GMTasker.RazorPages.Models;
 
-namespace GMTasker.RazorPages.Pages.Login
+namespace GMTasker.RazorPages.Pages
 {
-    public class Login : PageModel
+    public class Index : PageModel
     {
         [BindProperty]
         public UsuarioModel UsuarioModel { get; set; } = new();
 
-        public Login(){
+        public Index(){
         }
 
         public async Task<IActionResult> OnPostAsync(){
@@ -34,13 +34,14 @@ namespace GMTasker.RazorPages.Pages.Login
 
             if (!response.IsSuccessStatusCode)
             {
-                return Page();
+                TempData["SenhaErrada"] = "Email ou Senha errada!";
+                return RedirectToPage('/');
             }
 
             var usuariosJson = await response.Content.ReadAsStringAsync();
             var usuarios = JsonConvert.DeserializeObject<UsuarioModel>(usuariosJson);
 
-            return Redirect($"/Usuario/Details/{usuarios!.id_usuario}");
+            return Redirect($"/Requisicao/{usuarios!.id_usuario}");
         }
         
     }

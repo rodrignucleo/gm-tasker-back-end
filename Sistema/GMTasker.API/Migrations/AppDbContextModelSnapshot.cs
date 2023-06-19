@@ -28,10 +28,10 @@ namespace GMTasker.API.Migrations
                     b.Property<DateTime>("data_cadastro")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<DateTime>("data_conclusao")
+                    b.Property<DateTime?>("data_conclusao")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<DateTime>("data_prevista_conclusao")
+                    b.Property<DateTime?>("data_prevista_conclusao")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("descricao")
@@ -71,9 +71,8 @@ namespace GMTasker.API.Migrations
                         new
                         {
                             id_requisicao = 1,
-                            data_cadastro = new DateTime(2023, 5, 28, 20, 57, 49, 590, DateTimeKind.Local).AddTicks(4302),
-                            data_conclusao = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            data_prevista_conclusao = new DateTime(2023, 6, 4, 20, 57, 49, 590, DateTimeKind.Local).AddTicks(4303),
+                            data_cadastro = new DateTime(2023, 6, 18, 18, 59, 29, 867, DateTimeKind.Local).AddTicks(8072),
+                            data_prevista_conclusao = new DateTime(2023, 6, 25, 18, 59, 29, 867, DateTimeKind.Local).AddTicks(8073),
                             id_atual_responsavel = 1,
                             id_status = 1,
                             id_usuario_criacao = 2,
@@ -119,8 +118,8 @@ namespace GMTasker.API.Migrations
                         new
                         {
                             id_sprint = 1,
-                            data_cadastro = new DateTime(2023, 5, 28, 20, 57, 49, 590, DateTimeKind.Local).AddTicks(3940),
-                            data_conclusao = new DateTime(2023, 5, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            data_cadastro = new DateTime(2023, 6, 18, 18, 59, 29, 867, DateTimeKind.Local).AddTicks(7782),
+                            data_conclusao = new DateTime(2023, 6, 18, 0, 0, 0, 0, DateTimeKind.Local),
                             id_status = 2,
                             id_usuario_criacao = 1,
                             nome = "JUNHO 1 a 15"
@@ -206,8 +205,8 @@ namespace GMTasker.API.Migrations
                             cpf = "12345678910",
                             email = "rodrignucleo@gmtasker.com",
                             nome = "Rodrigo Ribeiro",
-                            senha = "$2a$10$98deNIMv75FawNSH/BY9lObUVMGMBzOPFDtnAx/GeK/UKXDX5/hc.",
-                            senha_antiga = "$2a$10$4LnnDPZ5WRXhwgWQHf4.a.HLrdZGH9H3YQqnamSJUStNjQB6b.ayq",
+                            senha = "$2a$10$mQm6cnwPqdSVafXTRXpRIO07sst4u40yZ6Z858wjqcM9PRU9qiWoi",
+                            senha_antiga = "$2a$10$YDeeB.utokOefwCN4B4U0u1MtVuoSXfAO804G0a7JsAK6Fkl6wTBO",
                             telefone = "11992668225"
                         },
                         new
@@ -216,8 +215,8 @@ namespace GMTasker.API.Migrations
                             cpf = "98765412398",
                             email = "patricia.oliveira@gmtasker.com",
                             nome = "Patricia Oliveira",
-                            senha = "$2a$10$.Zi97I79ayAwrWHfQ/X/QORms.cnArruFFFSj7OPMH6b5sKYWa9eq",
-                            senha_antiga = "$2a$10$3TLZkaUbm.2uuKQlIo5szOFHopbLLQRSiNxhgE.Uym2mfGjyM4I8C",
+                            senha = "$2a$10$S/RqEBzox.RG8EOyELE8IuJ90fLdaR71ljf2GJvUDH5lYW05xDd9K",
+                            senha_antiga = "$2a$10$EnawPSbOXHEK.TZpAFh01.1phF/s/5axSdhYFaH5mMMxAYyf8CZem",
                             telefone = "9899265826597"
                         });
                 });

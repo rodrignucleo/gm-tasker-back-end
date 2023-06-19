@@ -1,6 +1,8 @@
 @page
-@model GMTasker.RazorPages.Pages.Login.Login
-
+@model GMTasker.RazorPages.Pages.Index
+@{
+    Layout = "./Shared/_LayoutDeslogado.cshtml";
+}
 <br/>
 <form method="post">
 <div asp-validation-summary="ModelOnly" class="text-dange"></div>
@@ -23,6 +25,11 @@
                <input asp-for="UsuarioModel.senha" type="password" id="UsuarioModel.senha" class="form-control form-control-lg" placeholder="********"/>
                <span asp-validation-for="UsuarioModel.senha" class="text-dange"></span>
             </div>
+            @if(TempData["SenhaErrada"] != null)
+            {
+               <div class="alert alert-danger">@TempData["SenhaErrada"]</div>
+               TempData["SenhaErrada"] = null;
+            }
             <input class="btn btn-outline-light btn-lg px-5" type="submit" value="Login"/>
          </div>
       </div>

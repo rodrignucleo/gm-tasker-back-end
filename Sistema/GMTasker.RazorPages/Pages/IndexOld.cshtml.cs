@@ -4,10 +4,10 @@ using Newtonsoft.Json;
 
 namespace GMTasker.RazorPages.Pages
 {
-    public class Index : PageModel
+    public class IndexOld : PageModel
     {
 
-        public Index(){
+        public IndexOld(){
             
         }
        

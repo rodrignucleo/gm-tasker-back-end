@@ -15,8 +15,8 @@ namespace GMTasker.API.Models
         public string? descricao { get; set; }
 
         public DateTime data_cadastro { get; set; } = DateTime.Now;
-        public DateTime data_prevista_conclusao { get; set; }
-        public DateTime data_conclusao { get; set; }
+        public DateTime? data_prevista_conclusao { get; set; }
+        public DateTime? data_conclusao { get; set; }
         
         [Required(ErrorMessage = "id_status é obrigatório!")]
         [ForeignKey("Status")]

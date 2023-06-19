@@ -69,8 +69,8 @@ namespace GMTasker.API.Data{
                         cpf = "98765412398",
                         telefone = "9899265826597",
                         email = "patricia.oliveira@gmtasker.com",
-                        senha = BCrypt.Net.BCrypt.HashPassword("123123"),
-                        senha_antiga = BCrypt.Net.BCrypt.HashPassword("123123")
+                        senha = BCrypt.Net.BCrypt.HashPassword("123"),
+                        senha_antiga = BCrypt.Net.BCrypt.HashPassword("123")
                     });
             });
 
