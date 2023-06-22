@@ -17,6 +17,7 @@ namespace GMTasker.API.Controllers.Requisicao
         [HttpGet]
         [Route("{id_usuario}")]
         public async Task<ActionResult<IEnumerable<RequisicaoModel>>> GetRequisicao(int? id_usuario){
+            Console.WriteLine("id do usuario da requisicao: " + id_usuario);
             return await _context!.tb_requisicao!
                 .Include(g => g.UsuarioResponsavel)
                 .Include(g => g.Usuario)
