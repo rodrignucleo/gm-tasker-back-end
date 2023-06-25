@@ -14,12 +14,30 @@ namespace GMTasker.API.Controllers.Sprint
             _context = context!;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<SprintModel>>> GetSprint(){
+        [HttpGet("usuSprint/{id_usuario}")]
+        public async Task<ActionResult<IEnumerable<SprintModel>>> GetSprint(int id_usuario){
             return await _context!.tb_sprint!
                 .Include(g => g.Usuario)
                 .Include(g => g.Status)
-                .OrderBy(g => g.data_conclusao)
+                .OrderBy(g => g.data_cadastro)
+                .Where(x => x.id_usuario_criacao! == id_usuario)
+                .ToListAsync();
+        }
+
+        [HttpGet]
+        [Route("conc/{id_usuario}")]
+        public async Task<ActionResult<IEnumerable<SprintModel>>> GetSprintNaoConcluida(int? id_usuario){
+            
+            var model = _context!.tb_sprint!.FirstOrDefault(x => x.id_usuario_criacao! == id_usuario && x.Status!.nome! != "CONCLUIDO");
+
+            if(model == null){
+                return NotFound("Usuário não tem Sprint!");
+            }
+
+            return await _context!.tb_sprint!
+                .Include(g => g.Status)
+                .OrderBy(g => g.data_cadastro)
+                .Where(x => x.id_usuario_criacao! == id_usuario)
                 .ToListAsync();
         }
 
@@ -36,7 +54,7 @@ namespace GMTasker.API.Controllers.Sprint
                 .Include(g => g.Usuario)
                 .Include(g => g.Status)
                 .Include(g => g.Sprint)
-                .OrderBy(g => g.data_prevista_conclusao)
+                .OrderBy(g => g.data_conclusao)
                 .Where(u => u.id_atual_responsavel.Equals(id_sprint)).ToListAsync();
         }
 
@@ -67,12 +85,18 @@ namespace GMTasker.API.Controllers.Sprint
             return Ok(model);
         }
 
-        [HttpPost]
-        public async Task<ActionResult<SprintModel>> PostSprint(SprintModel sprint){
+        [HttpPost("{statusNome}")]
+        public async Task<ActionResult<SprintModel>> PostSprint(SprintModel sprint, String statusNome){
+            
+            var modelStatus = _context!.tb_status!.FirstOrDefault(x => x.nome == statusNome);
+            sprint.id_status = modelStatus!.id_status;
+            
+            
             _context!.tb_sprint!.Add(sprint);
             await _context.SaveChangesAsync();
+            CreatedAtAction("GetSprint", new{id = sprint.id_sprint}, sprint);
 
-            return CreatedAtAction("GetSprint", new{id = sprint.id_sprint}, sprint);
+            return Ok(sprint);
         }
 
         [HttpDelete("{id_sprint}")]

@@ -25,14 +25,13 @@ namespace GMTasker.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("data_cadastro")
-                        .HasColumnType("datetime(6)");
+                    b.Property<string>("data_cadastro")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                    b.Property<DateTime?>("data_conclusao")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<DateTime?>("data_prevista_conclusao")
-                        .HasColumnType("datetime(6)");
+                    b.Property<string>("data_conclusao")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("descricao")
                         .HasColumnType("longtext");
@@ -71,8 +70,8 @@ namespace GMTasker.API.Migrations
                         new
                         {
                             id_requisicao = 1,
-                            data_cadastro = new DateTime(2023, 6, 18, 18, 59, 29, 867, DateTimeKind.Local).AddTicks(8072),
-                            data_prevista_conclusao = new DateTime(2023, 6, 25, 18, 59, 29, 867, DateTimeKind.Local).AddTicks(8073),
+                            data_cadastro = "01/06/2023",
+                            data_conclusao = "15/06/2023",
                             id_atual_responsavel = 1,
                             id_status = 1,
                             id_usuario_criacao = 2,
@@ -86,11 +85,11 @@ namespace GMTasker.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("data_cadastro")
-                        .HasColumnType("datetime(6)");
+                    b.Property<string>("data_cadastro")
+                        .HasColumnType("longtext");
 
-                    b.Property<DateTime>("data_conclusao")
-                        .HasColumnType("datetime(6)");
+                    b.Property<string>("data_conclusao")
+                        .HasColumnType("longtext");
 
                     b.Property<string>("descricao")
                         .HasColumnType("longtext");
@@ -118,8 +117,8 @@ namespace GMTasker.API.Migrations
                         new
                         {
                             id_sprint = 1,
-                            data_cadastro = new DateTime(2023, 6, 18, 18, 59, 29, 867, DateTimeKind.Local).AddTicks(7782),
-                            data_conclusao = new DateTime(2023, 6, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            data_cadastro = "01/06/2023",
+                            data_conclusao = "15/06/2023",
                             id_status = 2,
                             id_usuario_criacao = 1,
                             nome = "JUNHO 1 a 15"
@@ -205,8 +204,8 @@ namespace GMTasker.API.Migrations
                             cpf = "12345678910",
                             email = "rodrignucleo@gmtasker.com",
                             nome = "Rodrigo Ribeiro",
-                            senha = "$2a$10$mQm6cnwPqdSVafXTRXpRIO07sst4u40yZ6Z858wjqcM9PRU9qiWoi",
-                            senha_antiga = "$2a$10$YDeeB.utokOefwCN4B4U0u1MtVuoSXfAO804G0a7JsAK6Fkl6wTBO",
+                            senha = "$2a$10$eMSc83XAxc1YDgr0jHPpyOa50nR2iBCW8AfcXVzUO4/wKXh/Iu1OC",
+                            senha_antiga = "$2a$10$s.RvBDnHTa/n/paKR4wkq.E5kwYt0cJslWwvqf./M7izogPUJ1uYm",
                             telefone = "11992668225"
                         },
                         new
@@ -215,8 +214,8 @@ namespace GMTasker.API.Migrations
                             cpf = "98765412398",
                             email = "patricia.oliveira@gmtasker.com",
                             nome = "Patricia Oliveira",
-                            senha = "$2a$10$S/RqEBzox.RG8EOyELE8IuJ90fLdaR71ljf2GJvUDH5lYW05xDd9K",
-                            senha_antiga = "$2a$10$EnawPSbOXHEK.TZpAFh01.1phF/s/5axSdhYFaH5mMMxAYyf8CZem",
+                            senha = "$2a$10$QYavZkeWsndBU/tLNaFHYu6QJlHjdFZn6NFMdXi38pXNk7Y4lSkdK",
+                            senha_antiga = "$2a$10$GNhqMQWB6sWWM1jCV8f3s.WL9NmgvEa7BzrDUa36rzq3L/Kg2i.tq",
                             telefone = "9899265826597"
                         });
                 });

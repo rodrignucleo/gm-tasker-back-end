@@ -84,8 +84,8 @@ namespace GMTasker.API.Data{
                         id_sprint = 1,
                         id_status = 2,
                         nome = "JUNHO 1 a 15",
-                        data_cadastro = DateTime.Now,
-                        data_conclusao = DateTime.Today,
+                        data_cadastro = "01/06/2023", //DateTime.Parse("2023-06-01"),
+                        data_conclusao = "15/06/2023", //DateTime.Parse("2023-06-15"),
                         id_usuario_criacao = 1
                     });
             });
@@ -100,8 +100,8 @@ namespace GMTasker.API.Data{
                         id_requisicao = 1,
                         id_status = 1,
                         nome = "Desenvolver API",
-                        data_cadastro = DateTime.Now,
-                        data_prevista_conclusao = DateTime.Now.AddDays(7),
+                        data_cadastro = "01/06/2023", // DateTime.Parse("2023-06-01"),
+                        data_conclusao = "15/06/2023",  // DateTime.Parse("2023-06-15"),
                         id_atual_responsavel = 1,
                         id_usuario_criacao = 2
                     });
@@ -110,7 +110,7 @@ namespace GMTasker.API.Data{
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            // Para o docker
+            // Para a API no docker
             // options.UseMySQL("server=172.17.0.2;database=gmtasker_db;user=root;port=3306;password=123123");
             // Para localhost
             options.UseMySQL("server=localhost;database=gmtasker_db;user=root;port=3306;password=123123");

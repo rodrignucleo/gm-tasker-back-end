@@ -11,12 +11,13 @@ namespace GMTasker.API.Models
         
         [Required(ErrorMessage = "Nome é obrigatório!")]
         public string? nome { get; set; }
-
         public string? descricao { get; set; }
 
-        public DateTime data_cadastro { get; set; } = DateTime.Now;
-        public DateTime? data_prevista_conclusao { get; set; }
-        public DateTime? data_conclusao { get; set; }
+        [Required(ErrorMessage = "Data é obrigatório!")]
+        public string? data_cadastro { get; set; } 
+        
+        [Required(ErrorMessage = "Data é obrigatório!")]
+        public string? data_conclusao { get; set; }
         
         [Required(ErrorMessage = "id_status é obrigatório!")]
         [ForeignKey("Status")]

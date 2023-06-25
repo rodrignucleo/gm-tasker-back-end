@@ -37,20 +37,7 @@ namespace GMTasker.RazorPages.Pages
                 TempData["SenhaErrada"] = "Email ou Senha errada!";
                 return RedirectToPage('/');
             }
-
-            var idUsuario = await response.Content.ReadAsStringAsync();
-            // var usuarios = JsonConvert.DeserializeObject<UsuarioModel>(usuariosJson);
-            Console.WriteLine("id usuario front login: " + idUsuario);
-            Console.WriteLine("id sessao front login: " + idUsuario);
-
-            var httpClientSession = new HttpClient();
-            var urlSession = $"http://localhost:5072/api/Login/currentUser";
-            var requestMessageSession = new HttpRequestMessage(HttpMethod.Get, urlSession);
-            // requestMessageSession.Content =  await httpClientSession.SendAsync(requestMessageSession);
-            var responseSession = await httpClientSession.SendAsync(requestMessageSession);
-            var idUsuarioSession = await responseSession.Content.ReadAsStringAsync();
             
-            Console.WriteLine("idUsuarioSession1: " + idUsuarioSession);
             return RedirectToPage("/IndexOld");
         }
         

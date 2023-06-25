@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 using MySql.EntityFrameworkCore.Metadata;
 
 #nullable disable
@@ -59,8 +58,8 @@ namespace GMTasker.API.Migrations
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     nome = table.Column<string>(type: "longtext", nullable: false),
                     descricao = table.Column<string>(type: "longtext", nullable: true),
-                    data_cadastro = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    data_conclusao = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    data_cadastro = table.Column<string>(type: "longtext", nullable: true),
+                    data_conclusao = table.Column<string>(type: "longtext", nullable: true),
                     id_status = table.Column<int>(type: "int", nullable: false),
                     id_usuario_criacao = table.Column<int>(type: "int", nullable: false)
                 },
@@ -90,9 +89,8 @@ namespace GMTasker.API.Migrations
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     nome = table.Column<string>(type: "longtext", nullable: false),
                     descricao = table.Column<string>(type: "longtext", nullable: true),
-                    data_cadastro = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    data_prevista_conclusao = table.Column<DateTime>(type: "datetime(6)", nullable: true),
-                    data_conclusao = table.Column<DateTime>(type: "datetime(6)", nullable: true),
+                    data_cadastro = table.Column<string>(type: "longtext", nullable: false),
+                    data_conclusao = table.Column<string>(type: "longtext", nullable: false),
                     id_status = table.Column<int>(type: "int", nullable: false),
                     id_atual_responsavel = table.Column<int>(type: "int", nullable: false),
                     id_usuario_criacao = table.Column<int>(type: "int", nullable: false),
@@ -142,19 +140,19 @@ namespace GMTasker.API.Migrations
                 columns: new[] { "id_usuario", "cpf", "email", "nome", "senha", "senha_antiga", "telefone" },
                 values: new object[,]
                 {
-                    { 1, "12345678910", "rodrignucleo@gmtasker.com", "Rodrigo Ribeiro", "$2a$10$mQm6cnwPqdSVafXTRXpRIO07sst4u40yZ6Z858wjqcM9PRU9qiWoi", "$2a$10$YDeeB.utokOefwCN4B4U0u1MtVuoSXfAO804G0a7JsAK6Fkl6wTBO", "11992668225" },
-                    { 2, "98765412398", "patricia.oliveira@gmtasker.com", "Patricia Oliveira", "$2a$10$S/RqEBzox.RG8EOyELE8IuJ90fLdaR71ljf2GJvUDH5lYW05xDd9K", "$2a$10$EnawPSbOXHEK.TZpAFh01.1phF/s/5axSdhYFaH5mMMxAYyf8CZem", "9899265826597" }
+                    { 1, "12345678910", "rodrignucleo@gmtasker.com", "Rodrigo Ribeiro", "$2a$10$eMSc83XAxc1YDgr0jHPpyOa50nR2iBCW8AfcXVzUO4/wKXh/Iu1OC", "$2a$10$s.RvBDnHTa/n/paKR4wkq.E5kwYt0cJslWwvqf./M7izogPUJ1uYm", "11992668225" },
+                    { 2, "98765412398", "patricia.oliveira@gmtasker.com", "Patricia Oliveira", "$2a$10$QYavZkeWsndBU/tLNaFHYu6QJlHjdFZn6NFMdXi38pXNk7Y4lSkdK", "$2a$10$GNhqMQWB6sWWM1jCV8f3s.WL9NmgvEa7BzrDUa36rzq3L/Kg2i.tq", "9899265826597" }
                 });
 
             migrationBuilder.InsertData(
                 table: "tb_requisicao",
-                columns: new[] { "id_requisicao", "data_cadastro", "data_conclusao", "data_prevista_conclusao", "descricao", "id_atual_responsavel", "id_sprint", "id_status", "id_usuario_criacao", "nome" },
-                values: new object[] { 1, new DateTime(2023, 6, 18, 18, 59, 29, 867, DateTimeKind.Local).AddTicks(8072), null, new DateTime(2023, 6, 25, 18, 59, 29, 867, DateTimeKind.Local).AddTicks(8073), null, 1, null, 1, 2, "Desenvolver API" });
+                columns: new[] { "id_requisicao", "data_cadastro", "data_conclusao", "descricao", "id_atual_responsavel", "id_sprint", "id_status", "id_usuario_criacao", "nome" },
+                values: new object[] { 1, "01/06/2023", "15/06/2023", null, 1, null, 1, 2, "Desenvolver API" });
 
             migrationBuilder.InsertData(
                 table: "tb_sprint",
                 columns: new[] { "id_sprint", "data_cadastro", "data_conclusao", "descricao", "id_status", "id_usuario_criacao", "nome" },
-                values: new object[] { 1, new DateTime(2023, 6, 18, 18, 59, 29, 867, DateTimeKind.Local).AddTicks(7782), new DateTime(2023, 6, 18, 0, 0, 0, 0, DateTimeKind.Local), null, 2, 1, "JUNHO 1 a 15" });
+                values: new object[] { 1, "01/06/2023", "15/06/2023", null, 2, 1, "JUNHO 1 a 15" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_tb_requisicao_id_atual_responsavel",
