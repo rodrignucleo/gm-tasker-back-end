@@ -1,3 +1,4 @@
+
 using GMTasker.API.Data;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -12,15 +12,15 @@ ENV ASPNETCORE_ENVIRONMENT=Development
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["Sistema/GMTasker.API/GMTasker.API.csproj", "Sistema/GMTasker.API/"]
-RUN dotnet restore "Sistema/GMTasker.API/GMTasker.API.csproj"
+COPY ["GMTasker.API/GMTasker.API.csproj", "GMTasker.API/"]
+RUN dotnet restore "GMTasker.API/GMTasker.API.csproj"
 COPY . .
-WORKDIR "/src/Sistema/GMTasker.API"
+WORKDIR "/src/GMTasker.API"
 RUN dotnet build "GMTasker.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "GMTasker.API.csproj" -c Release -o /app/publish 
-# /p:UseAppHost=false
+#/p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
