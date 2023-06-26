@@ -66,6 +66,16 @@ namespace GMTasker.API.Controllers.Usuario
         [HttpPut("edit/password/{id_usuario}")]
         public ActionResult PutUsuarioSenha(int id_usuario, UsuarioModel usuario)
         {
+            var modelUsuario = _context!.tb_usuario!.FirstOrDefault(x => x.email == usuario.email);
+            
+            if (usuario.email == "")
+            {
+                return NotFound("Email não digitado");
+            }
+            if (modelUsuario != null)
+            {
+                return NotFound("Esse email já esta cadastrado!");
+            }
             if (id_usuario != usuario.id_usuario)
             {
                 return BadRequest();
@@ -100,6 +110,17 @@ namespace GMTasker.API.Controllers.Usuario
 
         [HttpPost]
         public async Task<ActionResult<UsuarioModel>> PostUsuario(UsuarioModel usuario){
+            var modelUsuario = _context!.tb_usuario!.FirstOrDefault(x => x.email == usuario.email);
+            
+            if (usuario.email == "")
+            {
+                return NotFound("Email não digitado");
+            }
+            if (modelUsuario != null)
+            {
+                return NotFound("Esse email já esta cadastrado!");
+            }
+
             usuario.senha = BCrypt.Net.BCrypt.HashPassword(usuario.senha);
             usuario.senha_antiga = usuario.senha;
             
