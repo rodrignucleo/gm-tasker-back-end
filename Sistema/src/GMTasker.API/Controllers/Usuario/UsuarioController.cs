@@ -103,8 +103,8 @@ namespace GMTasker.API.Controllers.Usuario
             }
             else
             {
-                Console.WriteLine("Nao esta igual!");
-                return NotFound();
+                Console.WriteLine("A senha não esta igual!");
+                return NotFound("A senha não esta igual!");
             }
         }
 
