@@ -140,8 +140,8 @@ namespace GMTasker.API.Migrations
                 columns: new[] { "id_usuario", "cpf", "email", "nome", "senha", "senha_antiga", "telefone" },
                 values: new object[,]
                 {
-                    { 1, "12345678910", "rodrignucleo@gmtasker.com", "Rodrigo Ribeiro", "$2a$10$iuc1SiAHjv2a/JTzAA/cO.uiU2pDu36edDCYitqOV4dzQ3fdSMu.q", "$2a$10$uO/h3cv0LbUjDrwlur7pouCTeVS6I3RuC2IQry5beUYhGqL98z0Za", "11992668225" },
-                    { 2, "98765412398", "patricia.oliveira@gmtasker.com", "Patricia Oliveira", "$2a$10$rKGc8XzAk/HgjhNXnzQUjufPgYlSeAp4.Oe.Xpsfi3tDSJzrkOoEW", "$2a$10$Wm633aWiA.8Zc6ZL7kyWG.mAnwzVRJ/IDEXYJWAKBalA.o59RQuju", "9899265826597" }
+                    { 1, "12345678910", "rodrignucleo@gmtasker.com", "Rodrigo Ribeiro", "$2a$10$45GCXGY8uoOp9W.aPPbTVeuLAkHUi0X.TPEB2klfuPKXv269Uv7U6", "$2a$10$2jKHSjA5nehqAvNkTz3hZedJ2c67qOwfvph19slJfh6oTqAZCL07i", "11992668225" },
+                    { 2, "98765412398", "patricia.oliveira@gmtasker.com", "Patricia Oliveira", "$2a$10$izuA99JxMNVyeG.HMP1y5O9CXFBFmoKelaGaZPMsLEDqqNlt/gBVq", "$2a$10$fsX7V/Aaf3fquFwqnSUxduMAuWKAyi58cbdoDDbbamyG3Ae9eQoTW", "9899265826597" }
                 });
 
             migrationBuilder.InsertData(

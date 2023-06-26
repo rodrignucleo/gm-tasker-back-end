@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GMTasker.API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230625222153_CreateDatabase")]
+    [Migration("20230625231749_CreateDatabase")]
     partial class CreateDatabase
     {
         /// <inheritdoc />
@@ -207,8 +207,8 @@ namespace GMTasker.API.Migrations
                             cpf = "12345678910",
                             email = "rodrignucleo@gmtasker.com",
                             nome = "Rodrigo Ribeiro",
-                            senha = "$2a$10$iuc1SiAHjv2a/JTzAA/cO.uiU2pDu36edDCYitqOV4dzQ3fdSMu.q",
-                            senha_antiga = "$2a$10$uO/h3cv0LbUjDrwlur7pouCTeVS6I3RuC2IQry5beUYhGqL98z0Za",
+                            senha = "$2a$10$45GCXGY8uoOp9W.aPPbTVeuLAkHUi0X.TPEB2klfuPKXv269Uv7U6",
+                            senha_antiga = "$2a$10$2jKHSjA5nehqAvNkTz3hZedJ2c67qOwfvph19slJfh6oTqAZCL07i",
                             telefone = "11992668225"
                         },
                         new
@@ -217,8 +217,8 @@ namespace GMTasker.API.Migrations
                             cpf = "98765412398",
                             email = "patricia.oliveira@gmtasker.com",
                             nome = "Patricia Oliveira",
-                            senha = "$2a$10$rKGc8XzAk/HgjhNXnzQUjufPgYlSeAp4.Oe.Xpsfi3tDSJzrkOoEW",
-                            senha_antiga = "$2a$10$Wm633aWiA.8Zc6ZL7kyWG.mAnwzVRJ/IDEXYJWAKBalA.o59RQuju",
+                            senha = "$2a$10$izuA99JxMNVyeG.HMP1y5O9CXFBFmoKelaGaZPMsLEDqqNlt/gBVq",
+                            senha_antiga = "$2a$10$fsX7V/Aaf3fquFwqnSUxduMAuWKAyi58cbdoDDbbamyG3Ae9eQoTW",
                             telefone = "9899265826597"
                         });
                 });
