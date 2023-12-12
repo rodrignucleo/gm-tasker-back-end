@@ -8,7 +8,7 @@ using MySql.EntityFrameworkCore.Metadata;
 namespace GMTasker.API.Migrations
 {
     /// <inheritdoc />
-    public partial class CreateDatabase : Migration
+    public partial class migration01 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -47,6 +47,28 @@ namespace GMTasker.API.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_tb_usuario", x => x.id_usuario);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "tb_ponto",
+                columns: table => new
+                {
+                    id_ponto = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    data_ponto = table.Column<string>(type: "longtext", nullable: false),
+                    hora_ponto = table.Column<string>(type: "longtext", nullable: false),
+                    id_usuario_criacao = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_tb_ponto", x => x.id_ponto);
+                    table.ForeignKey(
+                        name: "FK_tb_ponto_tb_usuario_id_usuario_criacao",
+                        column: x => x.id_usuario_criacao,
+                        principalTable: "tb_usuario",
+                        principalColumn: "id_usuario",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
 
@@ -140,8 +162,8 @@ namespace GMTasker.API.Migrations
                 columns: new[] { "id_usuario", "cpf", "email", "nome", "senha", "senha_antiga", "telefone" },
                 values: new object[,]
                 {
-                    { 1, "12345678910", "rodrignucleo@gmtasker.com", "Rodrigo Ribeiro", "$2a$10$45GCXGY8uoOp9W.aPPbTVeuLAkHUi0X.TPEB2klfuPKXv269Uv7U6", "$2a$10$2jKHSjA5nehqAvNkTz3hZedJ2c67qOwfvph19slJfh6oTqAZCL07i", "11992668225" },
-                    { 2, "98765412398", "patricia.oliveira@gmtasker.com", "Patricia Oliveira", "$2a$10$izuA99JxMNVyeG.HMP1y5O9CXFBFmoKelaGaZPMsLEDqqNlt/gBVq", "$2a$10$fsX7V/Aaf3fquFwqnSUxduMAuWKAyi58cbdoDDbbamyG3Ae9eQoTW", "9899265826597" }
+                    { 1, "12345678910", "rodrignucleo@gmtasker.com", "Rodrigo Ribeiro", "$2a$10$6VMRh4gx8NBBN7mVeLSJte5VfW/xafA9QbNORGgfs2k94eopNWY1K", "$2a$10$oqAdQrKQFZPTNUK0CZEOguSGYsYVQhtpJC7NaSB5YGfklnuzI7wje", "11992668225" },
+                    { 2, "98765412398", "patricia.oliveira@gmtasker.com", "Patricia Oliveira", "$2a$10$ECTQtVUO/UX.xRTO/TbHZ./cg3/fkHeTeENzA8RWIiQTk5GlNcW52", "$2a$10$nZMSxl6QxQUN669y/eoxjeg4SuHh1FjoStYrtZ7rWFuvXWGXye/rq", "9899265826597" }
                 });
 
             migrationBuilder.InsertData(
@@ -153,6 +175,11 @@ namespace GMTasker.API.Migrations
                 table: "tb_sprint",
                 columns: new[] { "id_sprint", "data_cadastro", "data_conclusao", "descricao", "id_status", "id_usuario_criacao", "nome" },
                 values: new object[] { 1, "01/06/2023", "15/06/2023", null, 2, 1, "JUNHO 1 a 15" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_tb_ponto_id_usuario_criacao",
+                table: "tb_ponto",
+                column: "id_usuario_criacao");
 
             migrationBuilder.CreateIndex(
                 name: "IX_tb_requisicao_id_atual_responsavel",
@@ -188,6 +215,9 @@ namespace GMTasker.API.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "tb_ponto");
+
             migrationBuilder.DropTable(
                 name: "tb_requisicao");
 

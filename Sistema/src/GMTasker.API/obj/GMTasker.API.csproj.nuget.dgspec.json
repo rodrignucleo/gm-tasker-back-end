@@ -1,32 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\src\\GMTasker.API\\GMTasker.API.csproj": {}
+    "C:\\Users\\rodri\\Documents\\Programacao\\Mobiles\\gm-tasker-back-end\\Sistema\\src\\GMTasker.API\\GMTasker.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\src\\GMTasker.API\\GMTasker.API.csproj": {
+    "C:\\Users\\rodri\\Documents\\Programacao\\Mobiles\\gm-tasker-back-end\\Sistema\\src\\GMTasker.API\\GMTasker.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\src\\GMTasker.API\\GMTasker.API.csproj",
+        "projectUniqueName": "C:\\Users\\rodri\\Documents\\Programacao\\Mobiles\\gm-tasker-back-end\\Sistema\\src\\GMTasker.API\\GMTasker.API.csproj",
         "projectName": "GMTasker.API",
-        "projectPath": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\src\\GMTasker.API\\GMTasker.API.csproj",
+        "projectPath": "C:\\Users\\rodri\\Documents\\Programacao\\Mobiles\\gm-tasker-back-end\\Sistema\\src\\GMTasker.API\\GMTasker.API.csproj",
         "packagesPath": "C:\\Users\\rodri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\src\\GMTasker.API\\obj\\",
+        "outputPath": "C:\\Users\\rodri\\Documents\\Programacao\\Mobiles\\gm-tasker-back-end\\Sistema\\src\\GMTasker.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rodri\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\rodri\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -37,8 +35,8 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "BCrypt.Net": {
               "target": "Package",
@@ -88,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

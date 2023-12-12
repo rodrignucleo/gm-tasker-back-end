@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wHP6mWFjNyRi/uBGiJx0BQn16Bc1CPEhJyWK73WyMRBH7y1xWfaS1BRxM+NUv/oQV1wVOWTjx4JpF1l/zVVUEQ==",
+  "dgSpecHash": "ve0iOioUPveH5M8eD+oJJOJaKwJrXltLcn3esS33dqjYbdELu59AdEEzExL6DKlh0zIVr/uvl/rhV1Jsc1gIzQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rodri\\OneDrive\\Documentos\\Programacao\\TDS\\Gerenciador De Tarefa\\GM-Tasker\\Sistema\\src\\GMTasker.API\\GMTasker.API.csproj",
+  "projectFilePath": "C:\\Users\\rodri\\Documents\\Programacao\\Mobiles\\gm-tasker-back-end\\Sistema\\src\\GMTasker.API\\GMTasker.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rodri\\.nuget\\packages\\bcrypt.net\\0.1.0\\bcrypt.net.0.1.0.nupkg.sha512",
     "C:\\Users\\rodri\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
@@ -68,10 +68,10 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "O pacote 'BCrypt.Net 0.1.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "message": "Package 'BCrypt.Net 0.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
       "libraryId": "BCrypt.Net",
       "targetGraphs": [
-        "net7.0"
+        "net8.0"
       ]
     }
   ]

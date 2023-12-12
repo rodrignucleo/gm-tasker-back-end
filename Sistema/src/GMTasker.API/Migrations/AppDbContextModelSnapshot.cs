@@ -19,6 +19,35 @@ namespace GMTasker.API.Migrations
                 .HasAnnotation("ProductVersion", "7.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("GMTasker.API.Models.PontoModel", b =>
+                {
+                    b.Property<int>("id_ponto")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("data_ponto")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("hora_ponto")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int?>("id_usuario_criacao")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<string>("status")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("id_ponto");
+
+                    b.HasIndex("id_usuario_criacao");
+
+                    b.ToTable("tb_ponto");
+                });
+
             modelBuilder.Entity("GMTasker.API.Models.RequisicaoModel", b =>
                 {
                     b.Property<int>("id_requisicao")
@@ -204,8 +233,8 @@ namespace GMTasker.API.Migrations
                             cpf = "12345678910",
                             email = "rodrignucleo@gmtasker.com",
                             nome = "Rodrigo Ribeiro",
-                            senha = "$2a$10$45GCXGY8uoOp9W.aPPbTVeuLAkHUi0X.TPEB2klfuPKXv269Uv7U6",
-                            senha_antiga = "$2a$10$2jKHSjA5nehqAvNkTz3hZedJ2c67qOwfvph19slJfh6oTqAZCL07i",
+                            senha = "$2a$10$ThFGPi2ZAeJAjElINTJoLe8TxnEkyWuNP207MEBxfIpOm.vapFqyW",
+                            senha_antiga = "$2a$10$JCCwrRHy88NZp6WLaX60/ekUuNZB96oOU0ZpyLjJJ28uLo4B1HKMa",
                             telefone = "11992668225"
                         },
                         new
@@ -214,10 +243,21 @@ namespace GMTasker.API.Migrations
                             cpf = "98765412398",
                             email = "patricia.oliveira@gmtasker.com",
                             nome = "Patricia Oliveira",
-                            senha = "$2a$10$izuA99JxMNVyeG.HMP1y5O9CXFBFmoKelaGaZPMsLEDqqNlt/gBVq",
-                            senha_antiga = "$2a$10$fsX7V/Aaf3fquFwqnSUxduMAuWKAyi58cbdoDDbbamyG3Ae9eQoTW",
+                            senha = "$2a$10$fpxJRJjZBdSe03bDCOQMAesw.pva6gTYd/mnx5gF7eX0Uy2OEyC5m",
+                            senha_antiga = "$2a$10$sabN5j0dxtOajvmqaR.JfOc6m8GNcZFoj1NGNfWGDyr2y8H8dOC8C",
                             telefone = "9899265826597"
                         });
+                });
+
+            modelBuilder.Entity("GMTasker.API.Models.PontoModel", b =>
+                {
+                    b.HasOne("GMTasker.API.Models.UsuarioModel", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("id_usuario_criacao")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("GMTasker.API.Models.RequisicaoModel", b =>
