@@ -10,6 +10,7 @@ namespace GMTasker.API.Data{
         public DbSet<StatusModel>? tb_status {get; set;}
         public DbSet<SprintModel>? tb_sprint {get; set;}
         public DbSet<RequisicaoModel>? tb_requisicao {get; set;}
+        public DbSet<PontoModel>? tb_ponto {get; set;}
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -111,11 +112,11 @@ namespace GMTasker.API.Data{
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             // Para a API no docker
-            options.UseMySQL("server=144.126.211.93;database=gmtasker_db;user=root;port=3306;password=123123");
+            // options.UseMySQL("server=144.126.211.93;database=gmtasker_db;user=root;port=3306;password=123123");
             
             // options.UseMySQL("server=144.126.211.93;database=gmtasker_db;user=root;port=3306;password=123123");
             // Para localhost
-            // options.UseMySQL("server=localhost;database=gmtasker_db;user=root;port=3306;password=123123");
+            options.UseMySQL("server=localhost;database=gmtasker_db;user=root;port=3307;password=123123");
         }
         
     }
