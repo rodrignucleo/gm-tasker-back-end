@@ -74,6 +74,26 @@ namespace GMTasker.API.Controllers.Requisicao
             return requisicao;
         }
 
+        [HttpGet("sprint/{id_sprint}")]
+        public ActionResult<IEnumerable<RequisicaoModel>> GetRequisicaoSprint(int id_sprint){
+
+            var requisicao = _context!.tb_requisicao!
+            .Include(g => g.UsuarioResponsavel)
+            .Include(g => g.Usuario)
+            .Include(g => g.Status)
+            .Include(g => g.Sprint)
+            .Where(u => u.id_sprint == id_sprint)
+            .OrderBy(g => g.data_cadastro);
+
+            if (requisicao == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(requisicao);
+        }
+
+
         [HttpPut("concluir/{id_requisicao}")]
         public ActionResult PutRequisicaoStatus(int id_requisicao)
         {
