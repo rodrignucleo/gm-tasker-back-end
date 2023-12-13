@@ -109,7 +109,7 @@ namespace GMTasker.API.Controllers.Sprint
             _context.tb_sprint.Remove(sprint);
             await _context.SaveChangesAsync();
             
-            return NoContent();
+            return Ok();
         }
     }
 }
