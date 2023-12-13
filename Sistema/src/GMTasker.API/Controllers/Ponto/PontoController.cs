@@ -28,9 +28,6 @@ namespace GMTasker.API.Controllers.Ponto
         [HttpGet("{id_usuario}")]
         public async Task<ActionResult<IEnumerable<RequisicaoModel>>> GetPonto(int? id_usuario, String data_ponto){
 
-            
-            Console.WriteLine(data_ponto);
-
             var Ponto = _context!.tb_ponto!
             .Where(x => x.id_usuario_criacao! == id_usuario)
             .Where(g => g.data_ponto == data_ponto)
@@ -59,7 +56,7 @@ namespace GMTasker.API.Controllers.Ponto
             }
 
             model.data_ponto = Ponto.data_ponto;
-            model.id_usuario_criacao = Ponto.id_usuario_criacao;
+            model.hora_ponto = Ponto.hora_ponto;
 
             _context.tb_ponto!.Update(model);
             _context.SaveChanges();
