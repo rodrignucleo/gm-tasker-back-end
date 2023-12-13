@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GMTasker.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fd4de2c8fc553ae5accf5c86ad29cc020b9f2e5")]
 [assembly: System.Reflection.AssemblyProductAttribute("GMTasker.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GMTasker.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

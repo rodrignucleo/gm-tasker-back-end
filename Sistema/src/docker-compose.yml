@@ -7,7 +7,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=123123
     ports:
-      - "3306:3306"
+      - "3307:3306"
   gmtasker_api:
     build:
       context: .
