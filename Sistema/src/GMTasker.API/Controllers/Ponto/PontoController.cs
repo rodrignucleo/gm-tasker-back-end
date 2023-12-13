@@ -26,14 +26,16 @@ namespace GMTasker.API.Controllers.Ponto
         }
 
         [HttpGet("{id_usuario}")]
-        public async Task<ActionResult<IEnumerable<RequisicaoModel>>> GetPonto(int? id_usuario, String data_ponto){
+        public ActionResult<IEnumerable<RequisicaoModel>> GetPonto(int? id_usuario, String data_ponto)
+        {
 
             var Ponto = _context!.tb_ponto!
             .Where(x => x.id_usuario_criacao! == id_usuario)
             .Where(g => g.data_ponto == data_ponto)
             .OrderBy(g => g.data_ponto);
-            
-            if(Ponto == null){
+
+            if (Ponto == null)
+            {
                 return NotFound();
             }
 
