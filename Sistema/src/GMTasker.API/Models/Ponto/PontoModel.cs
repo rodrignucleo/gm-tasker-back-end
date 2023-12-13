@@ -10,13 +10,13 @@ namespace GMTasker.API.Models
         public int id_ponto { get; set; }
 
         [Required(ErrorMessage = "Data é obrigatório!")]
-        public String data_ponto { get; set; }
+        public String? data_ponto { get; set; }
 
         [Required(ErrorMessage = "Hora é obrigatório!")]
-        public String hora_ponto { get; set; }
+        public String? hora_ponto { get; set; }
 
         [Required(ErrorMessage = "Status é obrigatório!")]
-        public String status { get; set; }
+        public String? status { get; set; }
         
         [Required(ErrorMessage = "id_usuario_cadastrado é obrigatório!")]
         [ForeignKey("Usuario")]
