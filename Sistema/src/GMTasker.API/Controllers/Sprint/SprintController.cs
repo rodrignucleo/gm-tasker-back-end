@@ -49,24 +49,20 @@ namespace GMTasker.API.Controllers.Sprint
                 return NotFound();
             }
 
-            return await _context!.tb_requisicao!
-                .Include(g => g.UsuarioResponsavel)
-                .Include(g => g.Usuario)
-                .Include(g => g.Status)
-                .Include(g => g.Sprint)
-                .OrderBy(g => g.data_conclusao)
-                .Where(u => u.id_atual_responsavel.Equals(id_sprint)).ToListAsync();
+            return Ok(sprint);
         }
 
-        [HttpPut("{id_sprint}")]
-        public ActionResult PutSprint(int id_sprint, SprintModel sprint)
+        [HttpPut("{id_sprint}/{statusNome}")]
+        public ActionResult PutSprint(int id_sprint, SprintModel sprint, String statusNome)
         {
             if (id_sprint != sprint.id_sprint)
             {
                 return BadRequest();
             }
-            
+
+            var modelStatus = _context!.tb_status!.FirstOrDefault(x => x.nome == statusNome);
             var model = _context!.tb_sprint!.FirstOrDefault(x => x.id_sprint == id_sprint);
+            
             Console.WriteLine(model!.nome);
             if (model == null)
             {
@@ -75,9 +71,9 @@ namespace GMTasker.API.Controllers.Sprint
 
             model.nome = sprint.nome;
             model.descricao = sprint.descricao;
-            model.data_cadastro = sprint.data_cadastro;
+            model.data_cadastro = model.data_cadastro;
             model.data_conclusao = sprint.data_conclusao;
-            model.id_status = sprint.id_status;
+            model.id_status = modelStatus!.id_status;
             model.id_usuario_criacao = sprint.id_usuario_criacao;
 
             _context.tb_sprint!.Update(model);
